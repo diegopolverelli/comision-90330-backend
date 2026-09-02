@@ -1,0 +1,193 @@
+/* ==========================================
+   RESET & SYSTEM VARIABLES
+   ========================================== */
+   :root {
+    --bg-primary: #0f172a;
+    --bg-secondary: #1e293b;
+    --bg-tertiary: #334155;
+    --text-main: #f8fafc;
+    --text-muted: #94a3b8;
+    --accent: #6366f1;
+    --accent-hover: #4f46e5;
+    --border-color: #334155;
+    --radius: 8px;
+    --shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.3), 0 4px 6px -4px rgba(0, 0, 0, 0.3);
+    --font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  }
+  
+  *, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* ==========================================
+     BASE & TYPOGRAPHY
+     ========================================== */
+  body {
+    background-color: var(--bg-primary);
+    color: var(--text-main);
+    font-family: var(--font-family);
+    line-height: 1.6;
+    min-height: 100vh;
+    padding: 2rem 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  /* Contenedor principal genérico para tus vistas */
+  .container, main, body > div:not(.ignore-layout) {
+    width: 100%;
+    max-width: 900px;
+    background-color: var(--bg-secondary);
+    padding: 2.5rem;
+    border-radius: var(--radius);
+    border: 1px solid var(--border-color);
+    box-shadow: var(--shadow);
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    color: var(--text-main);
+    font-weight: 600;
+    line-height: 1.25;
+    margin-bottom: 1rem;
+  }
+  
+  h1 { font-size: 2.25rem; }
+  h2 { font-size: 1.75rem; }
+  h3 { font-size: 1.35rem; }
+  
+  p {
+    color: var(--text-muted);
+    margin-bottom: 1rem;
+  }
+  
+  hr {
+    border: none;
+    border-top: 1px solid var(--border-color);
+    margin: 1.5rem 0;
+  }
+  
+  /* ==========================================
+     LINKS & BUTTONS
+     ========================================== */
+  a {
+    color: var(--accent);
+    text-decoration: none;
+    transition: color 0.2s ease;
+  }
+  
+  a:hover {
+    color: var(--accent-hover);
+    text-decoration: underline;
+  }
+  
+  /* Enlaces con apariencia de botón */
+  a.btn, a[role="button"], button, input[type="submit"] {
+    display: inline-block;
+    background-color: var(--accent);
+    color: #ffffff;
+    padding: 0.65rem 1.25rem;
+    border-radius: var(--radius);
+    font-weight: 500;
+    font-size: 0.95rem;
+    border: none;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background-color 0.2s ease, transform 0.1s ease;
+  }
+  
+  a.btn:hover, button:hover, input[type="submit"]:hover {
+    background-color: var(--accent-hover);
+    text-decoration: none;
+  }
+  
+  button:active, input[type="submit"]:active {
+    transform: scale(0.98);
+  }
+  
+  /* ==========================================
+     FORMS & INPUTS
+     ========================================== */
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+    margin-top: 1rem;
+  }
+  
+  .form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  
+  label {
+    font-size: 0.9rem;
+    color: var(--text-main);
+    font-weight: 500;
+  }
+  
+  input[type="text"],
+  input[type="email"],
+  input[type="password"],
+  input[type="number"],
+  select,
+  textarea {
+    width: 100%;
+    padding: 0.75rem;
+    background-color: var(--bg-primary);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius);
+    color: var(--text-main);
+    font-family: inherit;
+    font-size: 0.95rem;
+    outline: none;
+    transition: border-color 0.2s ease;
+  }
+  
+  input:focus, select:focus, textarea:focus {
+    border-color: var(--accent);
+  }
+  
+  /* ==========================================
+     CARDS & CONTAINERS
+     ========================================== */
+  .card {
+    background-color: var(--bg-tertiary);
+    border-radius: var(--radius);
+    padding: 1.5rem;
+    margin-bottom: 1rem;
+    border: 1px solid var(--border-color);
+  }
+  
+  /* ==========================================
+     TABLES & LISTS
+     ========================================== */
+  ul, ol {
+    padding-left: 1.5rem;
+    color: var(--text-muted);
+    margin-bottom: 1rem;
+  }
+  
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1rem;
+  }
+  
+  th, td {
+    padding: 0.75rem 1rem;
+    text-align: left;
+    border-bottom: 1px solid var(--border-color);
+  }
+  
+  th {
+    background-color: var(--bg-tertiary);
+    color: var(--text-main);
+  }
+  
+  tr:hover {
+    background-color: rgba(255, 255, 255, 0.02);
+  }
